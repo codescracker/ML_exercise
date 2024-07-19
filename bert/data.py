@@ -201,3 +201,11 @@ train_data = BERTDataset(pairs, seq_len=MAX_LEN, tokenizer=tokenizer)
 train_loader = DataLoader(train_data, batch_size=32, shuffle=True, pin_memory=True)
 sample_data = next(iter(train_loader))
 print(train_data[random.randrange(len(train_data))])
+
+
+{
+'bert_input': torch.tensor([1,250,48,391,40,2045,231,173,3780,16,310,15126,4218,11277,9753,218,655,276,150,7898,3581,17,276,3,3,982,160,1051,17,146,982,394,3,1661,243,493,261,40,2248,16,162,17,2,48,11,52,213,3,815,842,3,674,17,2,0,0,0,0,0,0,0,0,0,0]), 
+'bert_label': torch.tensor([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1158,177,0,160,0,0,0,0,0,936,0,0,0,0,0,0,0,0,0,0,0,0,0,0,150,0,0,146,0,0,0,0,0,0,0,0,0,0,0,0,0]),  
+'segment_label': torch.tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),  
+'is_next': torch.tensor(1)
+}

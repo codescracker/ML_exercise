@@ -49,6 +49,7 @@ class MyDataSet(Data.Dataset):
     def __getitem__(self, idx):
         return self.enc_inputs[idx], self.dec_inputs[idx], self.dec_outputs[idx]
  
+ 
 if __name__ == '__main__':
     # S: 起始标记
     # E: 结束标记
